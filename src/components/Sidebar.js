@@ -99,7 +99,7 @@ c0.041-0.023,0.084-0.04,0.124-0.065l29.796-19.16v32.551C69.295,55.771,67.86,57.2
     ];
   }, []);
   return (
-    <div className='sticky top-0 bg-dark text-white p-4 h-screen flex flex-col w-1/5 items-center justify-between'>
+    <div className='sticky top-0 bg-sidebar text-white p-4 h-screen flex flex-col w-1/5 items-center justify-between'>
       <div className='flex flex-col space-y-3'>
         <div className='h-auto w-24 bg-primaryDeep rounded-full p-1'>
           <img src={profile} alt='' className='max-h-full rounded-full' />
@@ -108,7 +108,7 @@ c0.041-0.023,0.084-0.04,0.124-0.065l29.796-19.16v32.551C69.295,55.771,67.86,57.2
         <div className='flex justify-center space-x-2'>
           {mediaItems.map(([link, svg]) => {
             return (
-              <a href={link} target='_blank' rel='noreferrer noopener'>
+              <a key={link} href={link} target='_blank' rel='noreferrer noopener'>
                 <div className='bg-primaryDeep rounded-full p-1 hover:bg-primary'>{svg}</div>
               </a>
             );
@@ -117,11 +117,8 @@ c0.041-0.023,0.084-0.04,0.124-0.065l29.796-19.16v32.551C69.295,55.771,67.86,57.2
         <div className='flex flex-col space-y-5 pt-10'>
           {linkItems.map(([link, svg]) => {
             return (
-              <a href={link}>
-                <div
-                  key={link}
-                  className='flex space-x-2 fill-gray-400 stroke-gray-400 hover:fill-blue-400 hover:stroke-blue-400 text-gray-400 hover:text-white'
-                >
+              <a key={link} href={link}>
+                <div className='flex space-x-2 fill-gray-400 stroke-gray-400 hover:fill-highlight hover:stroke-highlight text-gray-400 hover:text-white'>
                   <div>{svg}</div>
                   <div>{link}</div>
                 </div>
