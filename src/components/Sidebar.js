@@ -99,7 +99,7 @@ c0.041-0.023,0.084-0.04,0.124-0.065l29.796-19.16v32.551C69.295,55.771,67.86,57.2
     ];
   }, []);
   return (
-    <div className='sticky top-0 bg-sidebar text-white p-4 h-screen flex flex-col w-1/5 items-center justify-between'>
+    <div className='sticky top-0 bg-sidebar text-white p-4 h-screen flex flex-col w-1/6 items-center justify-between'>
       <div className='flex flex-col space-y-3'>
         <div className='h-auto w-24 bg-primaryDeep rounded-full p-1'>
           <img src={profile} alt='' className='max-h-full rounded-full' />

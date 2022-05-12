@@ -1,34 +1,32 @@
+:root {
+  --hi-delay: 0.5s;
+  --name-delay: 1.5s;
+  --title-delay: 3s;
+  --react-delay: 4s;
+  --picture-delay: 6s;
+  --contactMe-delay: 6s;
+}
 .fadein {
   animation: fadein 2s;
   -moz-animation: fadein 2s; /* Firefox */
   -webkit-animation: fadein 2s; /* Safari and Chrome */
   -o-animation: fadein 2s; /* Opera */
-  animation-delay: 3s;
   animation-fill-mode: both;
 }
 .fadein-stringHi {
-  animation: fadein 2s;
-  -moz-animation: fadein 2s; /* Firefox */
-  -webkit-animation: fadein 2s; /* Safari and Chrome */
-  -o-animation: fadein 2s; /* Opera */
-  animation-delay: 0.5s;
-  animation-fill-mode: both;
+  animation-delay: var(--hi-delay);
 }
 .fadein-stringName {
-  animation: fadein 2s;
-  -moz-animation: fadein 2s; /* Firefox */
-  -webkit-animation: fadein 2s; /* Safari and Chrome */
-  -o-animation: fadein 2s; /* Opera */
-  animation-delay: 2s;
-  animation-fill-mode: both;
+  animation-delay: var(--name-delay);
 }
 .fadein-stringTitle {
-  animation: fadein 2s;
-  -moz-animation: fadein 2s; /* Firefox */
-  -webkit-animation: fadein 2s; /* Safari and Chrome */
-  -o-animation: fadein 2s; /* Opera */
-  animation-delay: 4s;
-  animation-fill-mode: both;
+  animation-delay: var(--title-delay);
+}
+.fadein-contactMe {
+  animation-delay: var(--contactMe-delay);
+}
+.fadein-picture {
+  animation-delay: var(--picture-delay);
 }
 @keyframes fadein {
   from {
@@ -149,8 +147,8 @@
   background-image: linear-gradient(100deg, #08fdd8 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
-  -webkit-transition: background 300ms ease-in-out;
-  transition: background 300ms ease-in-out;
+  -webkit-transition: background 500ms ease-in-out;
+  transition: background 500ms ease-in-out;
 }
 .fourth:hover {
   background-position: 0;
@@ -161,7 +159,7 @@
   border-right: 0.15em solid orange;
   white-space: nowrap;
   animation: typing 1s steps(10, end), blink-caret 0.75s step-end infinite;
-  animation-delay: 5s;
+  animation-delay: var(--react-delay);
   animation-fill-mode: both;
 }
 
@@ -182,4 +180,12 @@
   50% {
     border-color: orange;
   }
+}
+
+.scroll-down span {
+  writing-mode: vertical-rl;
+}
+
+.headerText {
+  font-family: 'League Spartan';
 }
