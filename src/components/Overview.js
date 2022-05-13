@@ -14,12 +14,12 @@ const Overview = () => {
   return (
     <section id='overview' className='relative py-10 pl-20 pr-32 h-screen items-center flex bg-background justify-between text-white select-none'>
       <div className='absolute top-0 left-0 py-10 pl-20'>
-        <p className='text-gray-500 text-md font-LBA tracking-widest relative -left-6 slide-in-top slide-in-top-html'>{`<html>`}</p>
-        <p className='text-gray-500 text-md font-LBA tracking-widest relative -left-4 slide-in-top slide-in-top-body'>{`<body>`}</p>
+        <p className='text-gray-500 text-md font-LBA tracking-widest relative -left-6 animate-slideInTop'>{`<html>`}</p>
+        <p className='text-gray-500 text-md font-LBA tracking-widest relative -left-4 animate-slideInTop animation-delay-200'>{`<body>`}</p>
       </div>
       <div className='font-semibold flex flex-col'>
-        <p className='text-gray-500 text-md font-LBA tracking-widest relative -left-2 slide-in-top slide-in-top-h1'>{`<h1>`}</p>
-        <h1 after='hi' className='flex flex-col text-8xl font-Manrope animate-fadein animation-delay-2000'>
+        <p className='text-gray-500 text-md font-LBA tracking-widest relative -left-2 animate-slideInTop animation-delay-600'>{`<h1>`}</p>
+        <h1 after='hi' className='flex flex-col text-8xl font-Manrope animate-fadeInBottom animation-delay-1500'>
           {myString.map(([className, currString]) => {
             return (
               <div className={`flex -space-x-1`}>
@@ -41,22 +41,24 @@ const Overview = () => {
             );
           })}
         </h1>
-        <p className='text-gray-500 text-md font-LBA tracking-widest relative -left-2 slide-in-top slide-in-top-h1'>{`<h1>`}</p>
+        <p className='text-gray-500 text-md font-LBA tracking-widest relative -left-2 animate-slideInTop animation-delay-600'>{`<h1>`}</p>
         <div className='flex mt-4'>
           <div>
-            <p className='text-gray-500 text-md font-LBA tracking-widest relative -left-2 slide-in-top slide-in-top-p'>{`<p>`}</p>
-            <p className='typed-out text-gray-400 text-lg tracking-widest font-OpenSans font-normal'>Front-End Developer / Mechatronics Graduate</p>
-            <p className='text-gray-500 text-md font-LBA tracking-widest relative -left-2 slide-in-top slide-in-top-p'>{`</p>`}</p>
+            <p className='text-gray-500 text-md font-LBA tracking-widest relative -left-2 animate-slideInTop animation-delay-600'>{`<p>`}</p>
+            <p className='border-r-2 border-orange-300 animate-typedOut overflow-hidden whitespace-nowrap text-gray-400 text-lg tracking-widest font-OpenSans font-normal animation-delay-2000'>
+              Front-End Developer / Mechatronics Graduate
+            </p>
+            <p className='text-gray-500 text-md font-LBA tracking-widest relative -left-2 animate-slideInTop animation-delay-600'>{`</p>`}</p>
           </div>
         </div>
         <div className='flex mt-8'>
-          <button className='border border-highlight py-3 px-14 fourth hover:text-black fade-in-bottom'>
+          <button className='fourth hover:bg-0 border border-highlight py-3 px-14 fourth hover:text-black animate-fadeInBottom animation-delay-1500'>
             <div className='tracking-widest font-OpenSans'>Contact me!</div>
           </button>
         </div>
       </div>
       <div className='h-128'>
-        <img src={landing} alt='' className='max-h-full fadein fadein-picture rounded-full' />
+        <img src={landing} alt='' className='max-h-full rounded-full animate-fadeInBottom animation-delay-1500' />
         {/* <div className='absolute'>
           <img src={me} alt='' className='fadein fadein-me' />
         </div> */}
@@ -87,11 +89,11 @@ const Overview = () => {
 
 $(window).on('load', function () {
   $('.char-animation').bind('webkitAnimationEnd mozAnimationEnd animationend', function () {
-    $(this).removeClass('jelloHorizontal');
+    $(this).removeClass('animate-jelloHorizontal');
   });
 
   $('.char-animation').hover(function () {
-    $(this).addClass('jelloHorizontal');
+    $(this).addClass('animate-jelloHorizontal');
   });
 });
 export default Overview;

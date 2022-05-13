@@ -1,6 +1,9 @@
 module.exports = {
   content: ['./src/**/*.{html,js}'],
   theme: {
+    backgroundPosition: {
+      0: 0,
+    },
     extend: {
       height: {
         128: '32rem',
@@ -54,11 +57,53 @@ module.exports = {
             transform: 'translateY(-6.4px)',
           },
         },
+        fadeInBottom: {
+          '0%': {
+            transform: 'translateY(50px)',
+            opacity: 0,
+          },
+          '100%': {
+            transform: 'translateY(0)',
+            opacity: 1,
+          },
+        },
+        slideInTop: {
+          '0%': {
+            transform: 'translateY(-1000px)',
+            opacity: '0',
+          },
+          '100%': {
+            transform: 'translateY(0)',
+            opacity: '1',
+          },
+        },
+        blinkCaret: {
+          from: {
+            borderColor: 'transparent',
+          },
+          '50%': {
+            borderColor: 'orange',
+          },
+          to: {
+            borderColor: 'orange',
+          },
+        },
+        typing: {
+          from: {
+            width: '0',
+          },
+          to: {
+            width: '100%',
+          },
+        },
       },
       animation: {
         fadein: 'fadein 2s both',
         jelloHorizontal: 'jelloHorizontal 0.9s both',
         shakeVertical: 'shakeVertical 7s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite both',
+        fadeInBottom: 'fadeInBottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both',
+        slideInTop: 'slideInTop 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both',
+        typedOut: 'typing 1.5s steps(30, end) both, blinkCaret 0.75s step-end infinite both',
       },
       fontFamily: {
         LBA: ['La Belle Aurore, cursive'],
