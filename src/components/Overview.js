@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { landing } from '../assets/';
+import { landing, me } from '../assets/';
 import './Overview.css';
 import $ from 'jquery';
 
@@ -12,16 +12,24 @@ const Overview = () => {
     ];
   }, []);
   return (
-    <section id='overview' className='relative py-10 pl-10 pr-24 h-screen items-center flex bg-background justify-between text-white'>
-      <div className='font-semibold flex flex-col space-y-8'>
-        <h1 className='flex flex-col text-8xl headerText'>
+    <section id='overview' className='relative py-10 pl-20 pr-32 h-screen items-center flex bg-background justify-between text-white select-none'>
+      <div className='absolute top-0 left-0 py-10 pl-20'>
+        <p className='text-gray-500 text-md font-LBA tracking-widest relative -left-6 slide-in-top slide-in-top-html'>{`<html>`}</p>
+        <p className='text-gray-500 text-md font-LBA tracking-widest relative -left-4 slide-in-top slide-in-top-body'>{`<body>`}</p>
+      </div>
+      <div className='font-semibold flex flex-col'>
+        <p className='text-gray-500 text-md font-LBA tracking-widest relative -left-2 slide-in-top slide-in-top-h1'>{`<h1>`}</p>
+        <h1 after='hi' className='flex flex-col text-8xl font-Manrope animate-fadein animation-delay-2000'>
           {myString.map(([className, currString]) => {
             return (
-              <div className={`flex fadein fadein-${className}`}>
+              <div className={`flex -space-x-1`}>
                 {currString.split('').map((char, index) => {
                   console.log(char);
                   if (char === ' ') {
                     return <div key={index}>&nbsp;</div>;
+                  }
+                  if (char === "'") {
+                    return <div key={index}>&#8217;</div>;
                   }
                   return (
                     <div key={index} className='char-animation hover:text-highlight'>
@@ -33,24 +41,28 @@ const Overview = () => {
             );
           })}
         </h1>
-        <div className='flex'>
+        <p className='text-gray-500 text-md font-LBA tracking-widest relative -left-2 slide-in-top slide-in-top-h1'>{`<h1>`}</p>
+        <div className='flex mt-4'>
           <div>
-            <p className='typed-out '>React Developer</p>
+            <p className='text-gray-500 text-md font-LBA tracking-widest relative -left-2 slide-in-top slide-in-top-p'>{`<p>`}</p>
+            <p className='typed-out text-gray-400 text-lg tracking-widest font-OpenSans font-normal'>Front-End Developer / Mechatronics Graduate</p>
+            <p className='text-gray-500 text-md font-LBA tracking-widest relative -left-2 slide-in-top slide-in-top-p'>{`</p>`}</p>
           </div>
         </div>
-        <div className='flex'>
-          <div className='border border-highlight py-2 px-8 fourth hover:text-black fadein fadein-contactMe'>
-            <button className=''>Contact me!</button>
-          </div>
+        <div className='flex mt-8'>
+          <button className='border border-highlight py-3 px-14 fourth hover:text-black fade-in-bottom'>
+            <div className='tracking-widest font-OpenSans'>Contact me!</div>
+          </button>
         </div>
       </div>
-      <div className='space-y-8 '>
-        <div className='h-96 '>
-          <img src={landing} alt='' className='max-h-full fadein fadein-picture rounded-full' />
-        </div>
+      <div className='h-128'>
+        <img src={landing} alt='' className='max-h-full fadein fadein-picture rounded-full' />
+        {/* <div className='absolute'>
+          <img src={me} alt='' className='fadein fadein-me' />
+        </div> */}
       </div>
-      <div className='flex absolute bottom-0 right-0 scroll-down flex flex-col items-center space-y-2'>
-        <span>scroll down</span>
+      <div className='flex absolute bottom-0 right-0 scroll-down flex flex-col items-center space-y-2 p-2'>
+        <span className='animate-shakeVertical py-2'>scroll down</span>
         <svg className='w-2' aria-hidden='true' focusable='false' data-icon='arrow-down' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'>
           <path
             fill='currentColor'
@@ -59,8 +71,8 @@ const Overview = () => {
           ></path>
         </svg>
       </div>
-      <div className='flex absolute bottom-0 left-0 scroll-down flex flex-col items-center space-y-2'>
-        <span>scroll down</span>
+      <div className='flex absolute bottom-0 left-0 scroll-down flex flex-col items-center space-y-2 p-2'>
+        <span className='animate-shakeVertical py-2'>scroll down</span>
         <svg className='w-2' aria-hidden='true' focusable='false' data-icon='arrow-down' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'>
           <path
             fill='currentColor'
@@ -75,11 +87,11 @@ const Overview = () => {
 
 $(window).on('load', function () {
   $('.char-animation').bind('webkitAnimationEnd mozAnimationEnd animationend', function () {
-    $(this).removeClass('jello-horizontal');
+    $(this).removeClass('jelloHorizontal');
   });
 
   $('.char-animation').hover(function () {
-    $(this).addClass('jello-horizontal');
+    $(this).addClass('jelloHorizontal');
   });
 });
 export default Overview;

@@ -5,3 +5,4 @@ export { default as landing } from './landing.jpg';
 export { default as bouldering } from './bouldering.mp4';
 export { default as github } from './github.png';
 export { default as linkedin } from './linkedin.png';
+export { default as me } from './me.png';

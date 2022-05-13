@@ -114,18 +114,18 @@ c0.041-0.023,0.084-0.04,0.124-0.065l29.796-19.16v32.551C69.295,55.771,67.86,57.2
             );
           })}
         </div>
-        <div className='flex flex-col space-y-5 pt-10'>
-          {linkItems.map(([link, svg]) => {
-            return (
-              <a key={link} href={link}>
-                <div className='flex space-x-2 fill-gray-400 stroke-gray-400 hover:fill-highlight hover:stroke-highlight text-gray-400 hover:text-white'>
-                  <div>{svg}</div>
-                  <div>{link}</div>
-                </div>
-              </a>
-            );
-          })}
-        </div>
+      </div>
+      <div className='flex flex-col space-y-5'>
+        {linkItems.map(([link, svg]) => {
+          return (
+            <a key={link} href={link}>
+              <div className='flex space-x-2 fill-gray-400 stroke-gray-400 hover:fill-highlight hover:stroke-highlight text-gray-400 hover:text-white'>
+                <div>{svg}</div>
+                <div>{link}</div>
+              </div>
+            </a>
+          );
+        })}
       </div>
       <div className='text-xs'>
         <div className='flex space-x-1'>
