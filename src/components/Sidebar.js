@@ -86,48 +86,48 @@ c0.041-0.023,0.084-0.04,0.124-0.065l29.796-19.16v32.551C69.295,55.771,67.86,57.2
     return [
       [
         'https://github.com/E-Fung',
-        <svg fill='#ffffff' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='20px' height='20px'>
+        <svg fill='#ffffff' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='100%' height='100%'>
           <path d='M10.9,2.1c-4.6,0.5-8.3,4.2-8.8,8.7c-0.5,4.7,2.2,8.9,6.3,10.5C8.7,21.4,9,21.2,9,20.8v-1.6c0,0-0.4,0.1-0.9,0.1 c-1.4,0-2-1.2-2.1-1.9c-0.1-0.4-0.3-0.7-0.6-1C5.1,16.3,5,16.3,5,16.2C5,16,5.3,16,5.4,16c0.6,0,1.1,0.7,1.3,1c0.5,0.8,1.1,1,1.4,1 c0.4,0,0.7-0.1,0.9-0.2c0.1-0.7,0.4-1.4,1-1.8c-2.3-0.5-4-1.8-4-4c0-1.1,0.5-2.2,1.2-3C7.1,8.8,7,8.3,7,7.6C7,7.2,7,6.6,7.3,6 c0,0,1.4,0,2.8,1.3C10.6,7.1,11.3,7,12,7s1.4,0.1,2,0.3C15.3,6,16.8,6,16.8,6C17,6.6,17,7.2,17,7.6c0,0.8-0.1,1.2-0.2,1.4 c0.7,0.8,1.2,1.8,1.2,3c0,2.2-1.7,3.5-4,4c0.6,0.5,1,1.4,1,2.3v2.6c0,0.3,0.3,0.6,0.7,0.5c3.7-1.5,6.3-5.1,6.3-9.3 C22,6.1,16.9,1.4,10.9,2.1z' />
         </svg>,
       ],
       [
         'https://www.linkedin.com/in/eric-fung-44377115a/',
-        <svg fill='#ffffff' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' width='20px' height='20px'>
+        <svg fill='#ffffff' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' width='100%' height='100%'>
           <path d='M9,25H4V10h5V25z M6.501,8C5.118,8,4,6.879,4,5.499S5.12,3,6.501,3C7.879,3,9,4.121,9,5.499C9,6.879,7.879,8,6.501,8z M27,25h-4.807v-7.3c0-1.741-0.033-3.98-2.499-3.98c-2.503,0-2.888,1.896-2.888,3.854V25H12V9.989h4.614v2.051h0.065 c0.642-1.18,2.211-2.424,4.551-2.424c4.87,0,5.77,3.109,5.77,7.151C27,16.767,27,25,27,25z' />
         </svg>,
       ],
     ];
   }, []);
   return (
-    <div className='sticky top-0 bg-sidebar text-white p-4 h-screen flex flex-col w-1/6 items-center justify-between'>
+    <div className='sticky top-0 bg-sidebar text-white p-4 h-screen flex flex-col w-1/7 items-center justify-between'>
       <div className='flex flex-col space-y-3'>
-        <div className='h-auto w-24 bg-primaryDeep rounded-full p-1'>
+        <div className='h-auto w-28 bg-primaryDeep rounded-full p-1'>
           <img src={profile} alt='' className='max-h-full rounded-full' />
         </div>
-        <div className='text-center font-semibold'>Eric Fung</div>
-        <div className='flex justify-center space-x-2'>
-          {mediaItems.map(([link, svg]) => {
-            return (
-              <a key={link} href={link} target='_blank' rel='noreferrer noopener'>
-                <div className='bg-primaryDeep rounded-full p-1 hover:bg-primary'>{svg}</div>
-              </a>
-            );
-          })}
-        </div>
+        <div className='text-center font-bold font-Manrope text-xl'>Eric Fung</div>
       </div>
       <div className='flex flex-col space-y-5'>
         {linkItems.map(([link, svg]) => {
           return (
             <a key={link} href={link}>
-              <div className='flex space-x-2 fill-gray-400 stroke-gray-400 hover:fill-highlight hover:stroke-highlight text-gray-400 hover:text-white'>
-                <div>{svg}</div>
+              <div className='flex space-x-2 fill-gray-400 font-OpenSans stroke-gray-400 hover:fill-highlight hover:stroke-highlight text-gray-400 hover:text-white'>
+                {/* <div>{svg}</div> */}
                 <div>{link}</div>
               </div>
             </a>
           );
         })}
       </div>
-      <div className='text-xs'>
+      <div className='text-xs space-y-4'>
+        <div className='flex justify-center space-x-2'>
+          {mediaItems.map(([link, svg]) => {
+            return (
+              <a key={link} href={link} target='_blank' rel='noreferrer noopener'>
+                <div className='bg-primaryDeep rounded-full p-1 hover:bg-primary w-10'>{svg}</div>
+              </a>
+            );
+          })}
+        </div>
         <div className='flex space-x-1'>
           <div>Email:</div>
           <a className='text-blue-400' href='mailto: ehhfung@gmail.com'>
