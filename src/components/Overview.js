@@ -9,13 +9,13 @@ const Overview = () => {
     return ['Hi,', "I'm Eric,", 'web developer'];
   }, []);
   return (
-    <section id='overview' className='relative px-36 h-screen items-center flex bg-background justify-between text-white select-none'>
+    <section id='overview' className='relative px-96 h-screen items-center flex bg-background justify-between text-white select-none'>
       <div className='absolute top-0 left-0 py-10 pl-20'>
-        <p className='text-gray-500 text-md font-LBA tracking-widest relative -left-6'>{`<html>`}</p>
-        <p className='text-gray-500 text-md font-LBA tracking-widest relative -left-4'>{`<body>`}</p>
+        <p className='text-gray-600 text-md font-LBA tracking-widest relative -left-6'>{`<html>`}</p>
+        <p className='text-gray-600 text-md font-LBA tracking-widest relative -left-4'>{`<body>`}</p>
       </div>
       <div className='font-semibold flex flex-col'>
-        <p className='text-gray-500 text-md font-LBA tracking-widest relative -left-2'>{`<h1>`}</p>
+        <p className='text-gray-600 text-md font-LBA tracking-widest relative -left-2'>{`<h1>`}</p>
         <AnimatedHeader arrayOfStrings={myString} />
         {/* <h1 className='flex flex-col text-8xl font-Manrope'>
           {myString.map((currString) => {
@@ -38,14 +38,14 @@ const Overview = () => {
             );
           })}
         </h1> */}
-        <p className='text-gray-500 text-md font-LBA tracking-widest relative -left-2'>{`<h1>`}</p>
+        <p className='text-gray-600 text-md font-LBA tracking-widest relative -left-2'>{`<h1>`}</p>
         <div className='flex mt-4'>
           <div>
-            <p className='text-gray-500 text-md font-LBA tracking-widest relative -left-2'>{`<p>`}</p>
+            <p className='text-gray-600 text-md font-LBA tracking-widest relative -left-2'>{`<p>`}</p>
             <p className='border-r-2 border-orange-300 animate-typedOut overflow-hidden whitespace-nowrap text-gray-400 text-lg tracking-widest font-OpenSans font-normal animation-delay-500'>
               Front-End Developer / Mechatronics Engineering Graduate
             </p>
-            <p className='text-gray-500 text-md font-LBA tracking-widest relative -left-2'>{`</p>`}</p>
+            <p className='text-gray-600 text-md font-LBA tracking-widest relative -left-2'>{`</p>`}</p>
           </div>
         </div>
         <div className='flex mt-8'>

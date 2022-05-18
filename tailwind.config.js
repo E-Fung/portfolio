@@ -12,8 +12,7 @@ module.exports = {
         fadeInBottom: 'fadeInBottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both',
         slideInTop: 'slideInTop 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both',
         typedOut: 'typing 1.5s steps(30, end) both, blinkCaret 0.75s step-end infinite both',
-        zzz: 'zzz 2.5s ease-out infinite both',
-        zzzEnd: 'zzz 2.5s ease-out forwards',
+        zzz: 'zzz 2s ease-out infinite both',
       },
       animationDelay: {
         1: '10s',
@@ -30,7 +29,9 @@ module.exports = {
         sidebar: 'rgb(24,24,24)',
         highlight: '#08fdd8',
         project: '#383A3F',
-        card: '#1F2124',
+        card: 'rgb(17, 34, 64)',
+        comp: '#808080',
+        // 17, 34, 64
       },
       fontFamily: {
         LBA: ['La Belle Aurore, cursive'],
@@ -133,7 +134,7 @@ module.exports = {
         zzz: {
           '0%': {
             color: 'rgba(160,84,246,0)',
-            fontSize: '30px',
+            fontSize: '20px',
             transform: 'translateY(100%)',
             opacity: '1',
           },
@@ -142,7 +143,7 @@ module.exports = {
           },
           '100%': {
             color: 'rgba(160,84,246,1)',
-            fontSize: '72px',
+            fontSize: '50px',
             transform: 'translateY(-100%)',
             opacity: '0',
           },

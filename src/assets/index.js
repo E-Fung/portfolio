@@ -7,6 +7,6 @@ export { default as github } from './github.png';
 export { default as linkedin } from './linkedin.png';
 export { default as me } from './me.png';
 export { default as pokedex } from './pokedex.png';
-export { default as deepLearning } from './deepLearning.jpg';
-export { default as PCD } from './PCD.jpg';
 export { default as posture } from './posture.jpg';
+export { default as nasa } from './nasa.jpg';
+export { default as ecommerce } from './ecommerce.png';
