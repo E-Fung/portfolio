@@ -15,7 +15,7 @@ const projectArray = [
   },
   {
     imgSrc: pokedex,
-    title: 'Pokedex',
+    title: 'Pokédex',
     link: 'https://e-fung.github.io/tsPokedex',
     githubLink: 'https://github.com/E-Fung/tsPokedex',
     summary:
@@ -36,17 +36,19 @@ const projectArray = [
     title: 'NASA APOD Gallery',
     link: 'https://main.d1xr7hntse7mza.amplifyapp.com/',
     githubLink: 'https://github.com/E-Fung/nasa_apod',
-    summary:
-      "A masonry layout gallery for NASA's 'Astronomy Picture of the Day' which features localstorage, 'saved liked' functionality as well as modals for more in depth information.",
+    summary: `A masonry layout gallery for NASA's "Astronomy Picture of the Day" which features localstorage 'saved liked' functionality as well as modals for more in depth information.`,
     techStack: 'TypeScript Material-UI React',
   },
 ];
 
 const Projects = () => {
   return (
-    <section id='projects' className='flex flex-col justify-center min-h-screen w-full px-96 py-20 space-y-20 bg-background text-white select-none'>
-      <div className='text-white font-bold text-3xl'>{/* <AnimatedHeader arrayOfStrings={projectString} /> */}Some Things I've Built</div>
-      <ul className='space-y-20'>
+    <section
+      id='projects'
+      className='flex flex-col justify-center min-h-screen w-full px-80 py-20 bg-background text-white select-none divide-y divide-highlight'
+    >
+      <div className='text-white font-bold text-3xl py-5'>{/* <AnimatedHeader arrayOfStrings={projectString} /> */}Some Things I've Built</div>
+      <ul className='space-y-20 py-10'>
         {projectArray.map((cardProps, index) => {
           return <ProjectCard key={cardProps.title} cardProps={cardProps} index={index} />;
         })}

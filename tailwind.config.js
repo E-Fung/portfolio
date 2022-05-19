@@ -31,6 +31,8 @@ module.exports = {
         project: '#383A3F',
         card: 'rgb(17, 34, 64)',
         comp: '#808080',
+        red: '#FD2155',
+        orange: 'rgb(255, 165, 0)',
         // 17, 34, 64
       },
       fontFamily: {

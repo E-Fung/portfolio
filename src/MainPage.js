@@ -1,11 +1,13 @@
 import React from 'react';
-import { Overview, Projects } from './components';
+import { Overview, Projects, About, Contact } from './components';
 
 const MainPage = () => {
   return (
     <div className='grow'>
       <Overview />
+      {/* <About /> */}
       <Projects />
+      {/* <Contact /> */}
     </div>
   );
 };

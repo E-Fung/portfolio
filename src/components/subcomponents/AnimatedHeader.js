@@ -12,7 +12,11 @@ const AnimatedHeader = ({ arrayOfStrings }) => {
                 return <div key={index}>&nbsp;</div>;
               }
               if (char === "'") {
-                return <div key={index}>&#8217;</div>;
+                return (
+                  <div key={index} className='char-animation hover:text-highlight'>
+                    &#8217;
+                  </div>
+                );
               }
               return (
                 <div key={index} className='char-animation hover:text-highlight'>

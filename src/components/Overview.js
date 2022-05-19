@@ -9,7 +9,7 @@ const Overview = () => {
     return ['Hi,', "I'm Eric,", 'web developer'];
   }, []);
   return (
-    <section id='overview' className='relative px-96 h-screen items-center flex bg-background justify-between text-white select-none'>
+    <section id='overview' className='relative px-40 h-screen items-center flex bg-background justify-between text-white select-none'>
       <div className='absolute top-0 left-0 py-10 pl-20'>
         <p className='text-gray-600 text-md font-LBA tracking-widest relative -left-6'>{`<html>`}</p>
         <p className='text-gray-600 text-md font-LBA tracking-widest relative -left-4'>{`<body>`}</p>
